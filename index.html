@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Calculator</title>
+<link rel="icon" type="image/x-icon" href="favcion.png">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body background="bg.jpg">
+
+<div class="container mt-5">
+    <div class="card border-radius:12px">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Tax Calculator</h2>
+        </div>
+        <div class="card-body">
+            <form id="taxForm">
+  
+              <div class="form-group">
+                    <label for="income">Gross Annual Income (₹)</label>
+                    <input type="number" class="form-control" id="income" required placeholder="Enter your gross annual income">
+                    <div class="error-icon" id="incomeError" data-toggle="tooltip" title="Income is mandatory!"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="extraIncome">Extra Income (₹)</label>
+                    <input type="number" class="form-control" id="extraIncome" placeholder="Enter extra income from other source">
+                    <div class="error-icon" id="extraIncomeError" data-toggle="tooltip" title="Invalid extra income!"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="deductions">Deductions (₹)</label>
+                    <input type="number" class="form-control" id="deductions" placeholder="Add total applicable deduction">
+                    <div class="error-icon" id="deductionsError" data-toggle="tooltip" title="Invalid deductions!"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <select class="form-control" id="age" required>
+                        <option value="<40">&lt;40</option>
+                        <option value="≥ 40 && ≤60">&ge; 40 &le; 60</option>
+                        <option value="≥ 60">&ge; 60</option>
+                    </select>
+                    <div class="error-icon" id="ageError" data-toggle="tooltip" title="Age is mandatory!"></div>
+                  </div>
+  
+                  <button type="submit" class="btn btn-primary border-radius:50%">Calculate Tax</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="resultModalLabel">Tax Calculation Result</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="taxResult"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+<footer class="bg-body-tertiary text-center p-5">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+        data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #3b5998;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #55acee;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #dd4b39;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #ac2bac;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #0082ca;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <!-- Github -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #333333;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center" style="background-color: antiquewhite; ">
+      © 2024 Copyright:
+      <a class="text-body" href="https://sameep-ka-portfolio.vercel.app/">Sameep</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+</body>
+</html>
